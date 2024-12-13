@@ -1,11 +1,13 @@
----
-- name: Launch Database
-  docker_container:
+- name: Launch the database container
+  community.docker.docker_container:
     name: my_database
-    image: postgres:latest
+    image: mysql:latest
+    state: started
+    restart_policy: always
     env:
-      POSTGRES_USER: my_user
-      POSTGRES_PASSWORD: my_password
-      POSTGRES_DB: my_database
-    ports:
-      - "5432:5432"
+      MYSQL_ROOT_PASSWORD: "root_password"
+      MYSQL_DATABASE: "mydb"
+    networks:
+      - name: my-network
+    published_ports:
+      - "3306:3306"

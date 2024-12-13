@@ -4,4 +4,4 @@ all:
     ansible_ssh_private_key_file: /root/devops-livecoding/id_rsa
   children:
     prod:
-      hosts: mouhamadou.gueye.takima.cloud
+      hosts: axel.benoist.takima.cloud

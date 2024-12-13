@@ -46,4 +46,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          mvn -X -e -B verify sonar:sonar -Dsonar.projectKey=Xxwdsdfs_devops-livecoding -Dsonar.organization=Xxwdsdfs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          mvn -X -e -B verify sonar:sonar -Dsonar.projectKey=Xxwdsdfs_devops-livecoding -Dsonar.organization=xxwdsdfs -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
